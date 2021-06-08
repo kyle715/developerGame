@@ -1,0 +1,38 @@
+h2 {
+    text-align: center;
+}
+.game {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    text-align: center;
+    border: solid 1px black;
+    width: 500px;
+    margin: auto;
+}
+.card {
+    grid-column: 2;
+    border: solid 1px black;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 6fr 1fr;
+}
+.buttons {
+    bottom: 0 !important;
+}
+button {
+    display: none;
+}
+#startGameButton {
+    display: contents;
+}
+.buttonStyle {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
