@@ -162,6 +162,7 @@ const playCards = (e) => {
         buttonTwo.innerText = `${cards[cardNumber].button2Text}`
         console.log(cards.length)
         console.log(cardNumber)
+        // 12345
     }
 }
 
