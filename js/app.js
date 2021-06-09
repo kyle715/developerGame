@@ -16,6 +16,14 @@ const buttonAreaSelect = document.querySelector('.buttons')
 
 const startButton = document.getElementById('startGameButton')
 
+const socialProgress = document.getElementById('social')
+
+const knowledgeProgress = document.getElementById('knowledge')
+
+const moneyProgress = document.getElementById('money')
+
+const displayCardArea = document.querySelector('.card')
+
 let cardNumber = 0
 
 // OBJECTS
@@ -88,7 +96,7 @@ const cards = [
         button2Knowledge: 1,
         button2Money: 30,
         button1Text: 'Id love to join!',
-        button2Text: '',
+        button2Text: 'I need the money.',
     },
     {
         context: "win card",
@@ -118,19 +126,14 @@ const startGame = () => {
     startGameButton.style.display ='none'
     buttonOne.setAttribute('class', 'buttonStyle')
     buttonTwo.setAttribute("class", 'buttonStyle')
-    buttonAreaSelect.removeEventListener('click', startGame)
-    buttonAreaSelect.addEventListener('click', displayCard)
-    displayCard()
-}
-
-const displayCard = () => {
-    card.innerHTML = `${cards[cardNumber].context}`
     buttonOne.innerText = `${cards[cardNumber].button1Text}`
     buttonTwo.innerText = `${cards[cardNumber].button2Text}`
-    buttonAreaSelect.removeEventListener('click', displayCard)
-    buttonAreaSelect.addEventListener('click',(e) => {
+    buttonOne.addEventListener('click',(e) => {
         playCards(e)
-})
+    })
+    buttonTwo.addEventListener('click',(e) => {
+    playCards(e)
+    })
 }
 
 const playCards = (e) => {
@@ -138,31 +141,28 @@ const playCards = (e) => {
         endGame()
     } else if(e.target.id == 'button1') {
         socialValue.value += cards[cardNumber].button1Social
-        social.innerHTML = `Social: ${socialValue.value}/100`
+        socialProgress.value = socialValue.value
         knowledgeValue.value += cards[cardNumber].button1Knowledge
-        knowledge.innerHTML = `Knowledge: ${knowledgeValue.value}/100`
+        knowledgeProgress.value = knowledgeValue.value
         moneyValue.value += cards[cardNumber].button1Money
-        money.innerHTML = `Money: ${moneyValue.value}/100`
+        moneyProgress.value = moneyValue.value
         cardNumber += 1
-        card.innerHTML = `${cards[cardNumber].context}`
         buttonOne.innerText = `${cards[cardNumber].button1Text}`
         buttonTwo.innerText = `${cards[cardNumber].button2Text}`
         console.log(cards.length)
         console.log(cardNumber)
     } else if (e.target.id == 'button2') {
         socialValue.value += cards[cardNumber].button2Social
-        social.innerHTML = `Social: ${socialValue.value}/100`
+        socialProgress.value = socialValue.value
         knowledgeValue.value += cards[cardNumber].button2Knowledge
-        knowledge.innerHTML = `Knowledge: ${knowledgeValue.value}/100`
+        knowledgeProgress.value = knowledgeValue.value
         moneyValue.value += cards[cardNumber].button2Money
-        money.innerHTML = `Money: ${moneyValue.value}/100`
+        moneyProgress.value = moneyValue.value
         cardNumber += 1
-        card.innerHTML = `${cards[cardNumber].context}`
         buttonOne.innerText = `${cards[cardNumber].button1Text}`
         buttonTwo.innerText = `${cards[cardNumber].button2Text}`
         console.log(cards.length)
         console.log(cardNumber)
-        // 12345
     }
 }
 
@@ -176,9 +176,75 @@ const endGame = () => {
     }
 }
 
+const createCards = () => {
+    for (let i = 0; i < cards.length; i++) {
+        let createCards = document.createElement('div')
+        createCards.setAttribute('class', 'game--card')
+        let newh3 = document.createElement('h3')
+        newh3.innerHTML = 'card title'
+        createCards.appendChild(newh3)
+        let newP = document.createElement('p')
+        newP.innerHTML = `${cards[i].context}`
+        createCards.appendChild(newP)
+    
+        displayCardArea.appendChild(createCards)
+        
+    }
+}
+createCards()
+
+
+const initCards = (card, index) => {
+    var newCards = document.querySelectorAll('.game--card:not(.removed)');
+  
+    newCards.forEach(function (card, index) {
+      card.style.zIndex = cards.length - index;
+      card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
+      card.style.opacity = (10 - index) / 10;
+    });
+    
+    displayCardArea.classList.add('loaded');
+    // displayCardArea.setAttribute('class', 'loaded')
+  }
+  
+  initCards();
+
+  function createButtonListener(love) {
+    return function (event) {
+      var allCards = document.querySelectorAll('.game--card:not(.removed)');
+      var moveOutWidth = document.body.clientWidth * 1.5;
+      console.log(allCards)
+  
+      if (!cards.length) return false;
+  
+      var card = allCards[0];
+  
+      card.classList.add('removed');
+  
+      if (love) {
+        card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+        console.log('hi')
+      } else {
+        card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
+        console.log('ohai')
+      }
+  
+      initCards();
+  
+      event.preventDefault();
+    };
+  }
+  
+  
+  var noListener = createButtonListener(false);
+  var yesListener = createButtonListener(true);
+
+  buttonOne.addEventListener('click', noListener);
+  buttonTwo.addEventListener('click', yesListener);
 
 
 //MISC
 
+const startButtonGame = document.getElementById('startGameButton')
 
-buttonAreaSelect.addEventListener('click', startGame)
+startButtonGame.addEventListener('click', startGame)
