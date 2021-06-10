@@ -51,13 +51,13 @@ p {
 .game--card {
     display: inline-block;
     width: 250px;
-    max-width: 300px;
     height: 400px;
     background: #FFFFFF;
     padding-bottom: 40px;
     border-radius: 8px;
     overflow: hidden;
     position: absolute;
+    left: 43%;
     will-change: transform;
     transition: all 0.3s ease-in-out;
     cursor: -webkit-grab;
@@ -147,7 +147,26 @@ button {
 }
 .startButtonArea {
     position: absolute;
-    left: 30%;
-    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     width:800px;
+}
+.gameEndWin {
+    background-image: url('https://i.pinimg.com/originals/a7/c9/87/a7c98793edb93ab88138283785399af3.gif');
+    top: 50%;
+    margin: auto 0;
+    position: absolute;
+    left:40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.gameEndLose {
+    background-color: black;
+    background-image: url('https://64.media.tumblr.com/50d2f848346f54f0e46a93cb60500edc/tumblr_mqv8pyCmQJ1s5jjtzo1_500.gifv');
+    top: 50%;
+    margin: auto 0;
+    position: absolute;
+    left:40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }

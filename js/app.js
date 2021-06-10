@@ -113,10 +113,10 @@ const cards = [
         context: "Bills are due",
         button1Social: 0,
         button1Knowledge: 0,
-        button1Money: -20,
+        button1Money: -15,
         button2Social: 0,
         button2Knowledge: 0,
-        button2Money: -20,
+        button2Money: -15,
         cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
         button1Text: 'PAY UP',
         button2Text: 'YOU HEARD HIM',
@@ -136,10 +136,10 @@ const cards = [
     {
         context: "Pop Quiz: What does DOM stand for",
         button1Social: 0,
-        button1Knowledge: 20,
+        button1Knowledge: -20,
         button1Money: 0,
         button2Social: 0,
-        button2Knowledge: -20,
+        button2Knowledge: 20,
         button2Money: 0,
         cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
         button1Text: 'Document Orientation Model',
@@ -158,65 +158,65 @@ const cards = [
         button2Text: 'Penquins Pickup Drink',
     },
     {
-        context: "win card",
-        button1Social: 50,
-        button1Knowledge: 50,
-        button1Money: 50,
-        button2Social: -50,
-        button2Knowledge: -50,
-        button2Money: -50,
+        context: "A Codecademy course is on sale right now",
+        button1Social: 0,
+        button1Knowledge: 20,
+        button1Money: -10,
+        button2Social: 0,
+        button2Knowledge: 0,
+        button2Money: 20,
         cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
-        button1Text: 'win',
-        button2Text: 'lose',
+        button1Text: 'Lets take it',
+        button2Text: 'I should be saving',
     },
     {
-        context: "win card",
-        button1Social: 50,
-        button1Knowledge: 50,
-        button1Money: 50,
-        button2Social: -50,
-        button2Knowledge: -50,
-        button2Money: -50,
+        context: "A local event is going on this weekend for a popular new programing language",
+        button1Social: 15,
+        button1Knowledge: 10,
+        button1Money: -5,
+        button2Social: -5,
+        button2Knowledge: -5,
+        button2Money: 10,
         cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
-        button1Text: 'win',
-        button2Text: 'lose',
+        button1Text: 'Sounds exciting',
+        button2Text: 'I need to work',
     },
     {
-        context: "win card",
-        button1Social: 50,
-        button1Knowledge: 50,
-        button1Money: 50,
-        button2Social: -50,
-        button2Knowledge: -50,
-        button2Money: -50,
+        context: "Pop Quiz: which method removes the last element from an array and returns it?",
+        button1Social: 0,
+        button1Knowledge: 20,
+        button1Money: 0,
+        button2Social: 0,
+        button2Knowledge: -20,
+        button2Money: 0,
         cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
-        button1Text: 'win',
-        button2Text: 'lose',
+        button1Text: 'pop()',
+        button2Text: 'shift()',
     },
     {
-        context: "win card",
-        button1Social: 50,
-        button1Knowledge: 50,
-        button1Money: 50,
-        button2Social: -50,
-        button2Knowledge: -50,
-        button2Money: -50,
+        context: "While getting your morning coffe you start up a conversation with someone else in the Software Field",
+        button1Social: 15,
+        button1Knowledge: 5,
+        button1Money: 0,
+        button2Social: -15,
+        button2Knowledge: -5,
+        button2Money: 0,
         cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
-        button1Text: 'win',
-        button2Text: 'lose',
+        button1Text: 'Talk about your latest project',
+        button2Text: 'Talk about your pet',
     },
-    {
-        context: "win card",
-        button1Social: 50,
-        button1Knowledge: 50,
-        button1Money: 50,
-        button2Social: -50,
-        button2Knowledge: -50,
-        button2Money: -50,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
-        button1Text: 'win',
-        button2Text: 'lose',
-    },
+    // {
+    //     context: "win card",
+    //     button1Social: 50,
+    //     button1Knowledge: 50,
+    //     button1Money: 50,
+    //     button2Social: -50,
+    //     button2Knowledge: -50,
+    //     button2Money: -50,
+    //     cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+    //     button1Text: 'win',
+    //     button2Text: 'lose',
+    // },
     {
         context:'You are ready to apply for a job, you send out your resume to your favorite local company and wish for the best',
         button1Social: 0,
@@ -282,7 +282,7 @@ const initCards = (card, index) => {
   }
   
 
-  function createButtonListener(love) {
+  function createButtonListener(bool) {
     return function (event) {
       var allCards = document.querySelectorAll('.game--card:not(.removed)');
       var moveOutWidth = document.body.clientWidth * 1.5;
@@ -294,7 +294,7 @@ const initCards = (card, index) => {
   
       card.classList.add('removed');
   
-      if (love) {
+      if (bool) {
         card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
         console.log('hi')
       } else {
@@ -359,10 +359,12 @@ const playCards = (e) => {
 
 
 const endGame = () => {
-    if(socialValue.value > 80 && knowledgeValue.value > 80 && moneyValue.value > 80) {
-        card.innerHTML = '<div class="nes-container is-rounded is-dark"><p>You got the job!</p></div>'
+    if(socialValue.value >= 75 && knowledgeValue.value >= 75 && moneyValue.value >= 75) {
+        document.body.setAttribute('class', 'gameEndWin')
+        document.body.innerHTML = '<div class="gameEnd nes-container is-rounded is-dark"><p>You got the job!<br><br><a onClick="window.location.reload()">Play again?</a></p></div>'
     } else {
-        card.innerHTML = '<p>better luck next time...</p>'
+        document.body.setAttribute('class', 'gameEndLose')
+        document.body.innerHTML = '<div class="gameEnd nes-container is-rounded is-dark"><p>Better luck next time...<br><br><a onClick="window.location.reload()">Try again?</a></p></div>'
     }
 }
 
