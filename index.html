@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,32 +17,35 @@
         <h2>Developer Game</h2>
     </header>
     <main>
-        <div class='game'>
+        <div id='game' class='hidden'>
             <div class='social'>
-                <img src='imgs/social.png'>
-                <p>Social</p>
-                <progress id="social" value="50" max="100"></progress>
+                <img src='imgs/socia.png'>
+                <progress class='nes-progress' id="social" value="20" max="100"></progress>
             </div>
             <div class='knowledge'>
                 <img src='imgs/knowledge.png'>
-                <p>Knowledge</p>
-                <progress id="knowledge" value="50" max="100"></progress>
+                <progress class='nes-progress' id="knowledge" value="20" max="100"></progress>
             </div>
             <div class='money'>
                 <img src='imgs/money.png'>
-                <p>Money</p>
-                <progress id="money" value="50" max="100"></progress>
+                <progress class='nes-progress' id="money" value="20" max="100"></progress>
             </div>
             <div class='card'>
                 <div class='cardContext'>
-                    
-                    <button id='startGameButton'>START GAME</button>
-                    
                 </div>
             </div>
-            <button id='button1'>1</button>
-            <button id='button2'>2</button>
+            <div class='button1'>
+                <button class='hidden' id='button1'>1</button>
             </div>
+            <div class='button2'>
+                <button type='button' class='hidden' id='button2'>2</button>
+
+            </div>
+        </div>
+        <div class='startButtonArea nes-container is-rounded is-dark'>
+            <p>Hello! and welcome to your new life. Here you will play as an aspiring web developer trying to find a job in a new city. You will be faced with many dificult choices on your way to becoming a developer, choose wisely and maybe youll be ready to take on your new carrer when the time comes.</p>
+            <button type='button' class='nes-btn is-primary' id='startGameButton'>START GAME</button>
+        </div>
         
     </main>
     <script src='js/app.js'></script>
