@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class='duringGame'>
     <header>
-        <h2>Developer Game</h2>
+        <h2 id='title' class='animate__animated animate__backInDown'>Developer Game</h2>
     </header>
     <main>
         <div id='game' class='hidden'>
@@ -42,7 +43,7 @@
 
             </div>
         </div>
-        <div class='startButtonArea nes-container is-rounded is-dark'>
+        <div class='startButtonArea nes-container is-rounded is-dark animate__animated animate__backInDown animate__slow animate__delay-1s'>
             <p>Hello! and welcome to your new life. Here you will play as an aspiring web developer trying to find a job in a new city.
                  You will be faced with many dificult choices on your way to becoming a developer, choose wisely and try to keep everything balanced and 
                  maybe youll be ready to take on your new carrer when the time comes.</p>

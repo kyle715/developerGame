@@ -50,7 +50,7 @@ let socialValue = {
 
 const cards = [
     {
-        context: 'You were planning on studying this weekend but you recived an invite on linkedIn to an event going on this weekend for local developers',
+        context: 'You were planning on studying but you recived an invite on linkedIn to an event going on this weekend for local developers',
         button1Social: 20,
         button1Knowledge: 5,
         button1Money: -5,
@@ -81,7 +81,7 @@ const cards = [
         button2Social: -5,
         button2Knowledge: 10,
         button2Money: 15,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://arc.duke.edu/sites/arc.duke.edu/files/resize/site-images/Bio-Studygroups-Image-341x166.png',
         button1Text: 'Id love to join!',
         button2Text: 'I need the money.',
     },
@@ -93,7 +93,7 @@ const cards = [
         button2Social: 0,
         button2Knowledge: 0,
         button2Money: 5,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://media.glassdoor.com/sqll/434871/udemy-squarelogo-1508859645642.png',
         button1Text: 'Lets take it',
         button2Text: "I'll pass",
     },
@@ -105,7 +105,7 @@ const cards = [
         button2Social: 0,
         button2Knowledge: 10,
         button2Money: 0,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://cdn.iconscout.com/icon/free/png-256/printer-1695681-1437194.png',
         button1Text: 'Sure, ill help',
         button2Text: 'Sorry, cars in the shop',
     },
@@ -117,7 +117,7 @@ const cards = [
         button2Social: 0,
         button2Knowledge: 0,
         button2Money: -15,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://www.clipartmax.com/png/middle/140-1401457_png-online-bill-pay-icon.png',
         button1Text: 'PAY UP',
         button2Text: 'YOU HEARD HIM',
     },
@@ -129,7 +129,7 @@ const cards = [
         button2Social: 5,
         button2Knowledge: 15,
         button2Money: 30,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://cdna.artstation.com/p/assets/images/images/015/930/196/large/josephine-versoza-pixel-mug-beer.jpg?1550218865',
         button1Text: 'Id be happy to work with you',
         button2Text: 'Do i get some free samples?',
     },
@@ -141,7 +141,7 @@ const cards = [
         button2Social: 0,
         button2Knowledge: 20,
         button2Money: 0,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://cdn.shopify.com/s/files/1/0822/1983/articles/quiz-pixel-art-pixel-art-quiz-test-mind-sport-game-pixel-8bit.png?v=1555549417',
         button1Text: 'Document Orientation Model',
         button2Text: 'Document Object Model',
     },
@@ -153,7 +153,7 @@ const cards = [
         button2Social: -20,
         button2Knowledge: -10,
         button2Money: 0,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://cdn.iconscout.com/icon/premium/png-256-thumb/phone-talking-3130364-2617656.png',
         button1Text: 'Penquin Power Ale',
         button2Text: 'Penquins Pickup Drink',
     },
@@ -165,7 +165,7 @@ const cards = [
         button2Social: 0,
         button2Knowledge: 0,
         button2Money: 20,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://content.codecademy.com/courses/freelance-1/unit-7/logo.png',
         button1Text: 'Lets take it',
         button2Text: 'I should be saving',
     },
@@ -177,7 +177,7 @@ const cards = [
         button2Social: -5,
         button2Knowledge: -5,
         button2Money: 10,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://cdn2.iconfinder.com/data/icons/symbol-gray-set-2/100/Untitled-1-06-512.png',
         button1Text: 'Sounds exciting',
         button2Text: 'I need to work',
     },
@@ -189,7 +189,7 @@ const cards = [
         button2Social: 0,
         button2Knowledge: -20,
         button2Money: 0,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://cdn.shopify.com/s/files/1/0822/1983/articles/quiz-pixel-art-pixel-art-quiz-test-mind-sport-game-pixel-8bit.png?v=1555549417',
         button1Text: 'pop()',
         button2Text: 'shift()',
     },
@@ -201,7 +201,7 @@ const cards = [
         button2Social: -15,
         button2Knowledge: -5,
         button2Money: 0,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://thumbs.dreamstime.com/b/coffee-cup-pixel-art-icon-pixel-illustration-coffee-cup-pixel-art-icon-pixel-color-illustration-183749630.jpg',
         button1Text: 'Talk about your latest project',
         button2Text: 'Talk about your pet',
     },
@@ -225,7 +225,7 @@ const cards = [
         button2Social: 0,
         button2Knowledge: 0,
         button2Money: 0,
-        cardIMG: 'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
+        cardIMG: 'https://cdn.iconscout.com/icon/premium/png-256-thumb/job-application-5-906654.png',
         button1Text: 'I hope i get it...',
         button2Text: 'but what if i dont?',
     }
@@ -259,7 +259,7 @@ const createCards = () => {
         newImg.setAttribute('src', `${cards[i].cardIMG}`)
         createCards.appendChild(newImg)
         let newP = document.createElement('p')
-        newP.setAttribute('class', 'pContext')
+        newP.setAttribute('class', 'pContext ')
         newP.innerHTML = `${cards[i].context}`
         createCards.appendChild(newP)
     
@@ -308,7 +308,9 @@ const initCards = (card, index) => {
     };
   }
 
-  const startGame = () => {
+
+
+const startGame = () => {
     startArea.style.display ='none'
     createCards()
     initCards()
@@ -324,6 +326,7 @@ const initCards = (card, index) => {
     playCards(e)
     })
 }
+
   
 
 const playCards = (e) => {
