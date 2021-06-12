@@ -28,7 +28,6 @@ const game = document.getElementById('game')
 
 const startArea = document.querySelector('.startButtonArea')
 
-
 let cardNumber = 0
 
 // OBJECTS
@@ -236,20 +235,6 @@ const cards = [
 // FUNCTIONS
 
 
-const updateSocial = (value) => {
-    socialValue.value -= value
-    social.innerHTML = `Social :${socialValue.value}/100`
-}
-
-const updateKnowledge = (value) => {
-    knowledgeValue.value -= value
-    knowledge.innerHTML = `Knowledge :${knowledgeValue.value}/100`
-}
-
-const updateMoney = (value) => {
-    moneyValue.value -= value
-    money.innerHTML = `Money :${moneyValue.value}/100`
-}
 
 const createCards = () => {
     for (let i = 0; i < cards.length; i++) {
@@ -342,8 +327,6 @@ const playCards = (e) => {
         cardNumber += 1
         buttonOne.innerText = `${cards[cardNumber].button1Text}`
         buttonTwo.innerText = `${cards[cardNumber].button2Text}`
-        console.log(cards.length)
-        console.log(cardNumber)
     } else if (e.target.id == 'button2') {
         socialValue.value += cards[cardNumber].button2Social
         socialProgress.value = socialValue.value
@@ -354,8 +337,6 @@ const playCards = (e) => {
         cardNumber += 1
         buttonOne.innerText = `${cards[cardNumber].button1Text}`
         buttonTwo.innerText = `${cards[cardNumber].button2Text}`
-        console.log(cards.length)
-        console.log(cardNumber)
     }
 }
 
